@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64", "wheel", "numpy", "Cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyamgx"
+version = "0.1"
+authors = [{name = "Ashwin Srinath"}]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+]
+
+[tool.setuptools]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+include = ["pyamgx*"]
+exclude = ["nix*", "conda_environments*"]
